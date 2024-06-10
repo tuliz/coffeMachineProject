@@ -30,3 +30,24 @@ resources = {
     "coffee": 100,
 }
 
+#varaibles initialization
+money = 0
+power = True
+
+#return the resources in print format
+def printReport():
+    """return the report of resources in printable format."""
+    return f'Water: {resources["water"]}ml\nMilk: {resources['milk']}ml\nCoffee: {resources['coffee']}g\nMoney: ${money}\n'
+
+#coffe machine start
+def coffeMachine():
+    while power:
+        answer = input("What would you like? (espresso/latte/cappuccino):")
+        if answer == 'off':
+            return
+        elif answer == 'report':
+            print(printReport())
+
+
+
+coffeMachine()
